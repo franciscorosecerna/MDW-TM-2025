@@ -16,6 +16,6 @@ router.post("/",validationMiddleware(CreateProductDto) ,createProduct);
 router.get("/", getProducts);
 router.get("/:id", getProduct);
 router.delete("/:id", deleteProduct);
-router.put("/:id",validationMiddleware(UpdateProductDto) ,);
+router.put("/:id",validationMiddleware(UpdateProductDto) ,updateProduct);
 
 export default router;
