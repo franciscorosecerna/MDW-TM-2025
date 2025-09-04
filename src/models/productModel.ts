@@ -10,9 +10,13 @@ const productSchema = new mongoose.Schema({
         default: 0,
         min: 0
     },
-    Description: {
+    description: {
         type: String,
-        require: false
+    },
+    stock: {
+        type: Number,
+        default: 0,
+        min: 0
     }
 });
 

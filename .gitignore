@@ -1,1 +1,41 @@
-node_modules
+# Dependencias
+node_modules/
+
+# Compilados de TypeScript
+dist/
+build/
+
+# Archivos de configuracion local
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Cache de npm/yarn/pnpm
+.npm/
+.yarn/
+.pnp.*
+.pnpm-debug.log
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDEs / editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Coverage (tests)
+coverage/
+.nyc_output/
+
+# Otros
+*.tsbuildinfo
