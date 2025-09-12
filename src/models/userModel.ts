@@ -7,6 +7,11 @@ const userSchema = new mongoose.Schema({
         unique: true,
         required: true,
     },
+    lastName:{
+        type: String,
+        unique: true,
+        required: true,
+    },
     email: {
         type: String,
         unique: true,
@@ -18,6 +23,11 @@ const userSchema = new mongoose.Schema({
         required: true,
         minlength: 6,
     },
+    age: {
+        type: Number,
+        default: 0,
+        min: 0
+    }
 });
 
 userSchema.pre("save", async function (next) {
