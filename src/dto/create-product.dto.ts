@@ -27,4 +27,7 @@ export class CreateProductDto {
     @Min(0, { message: "El stock no puede ser negativo" })
     @IsOptional()
     stock?: number;
+
+    @IsString({ message: "El nombre debe ser un texto"})
+    category!: string;
 }

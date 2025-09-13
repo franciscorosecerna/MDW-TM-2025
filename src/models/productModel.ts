@@ -17,7 +17,13 @@ const productSchema = new mongoose.Schema({
         type: Number,
         default: 0,
         min: 0
-    }
+    },
+    category: {
+        type: String,
+        required: true,
+        enum: ["electronics", "clothing", "books", "toys", "food", "other"],
+        default: "other",
+  }
 });
 
 export default mongoose.model("Product", productSchema);
