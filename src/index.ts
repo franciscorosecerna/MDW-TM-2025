@@ -5,6 +5,7 @@ import userRoutes from "./routes/userRoutes"
 import authRoutes from "./routes/auth";
 import { authenticateJWT } from "./middlewares/authMiddleware";
 import productRoutes from "./routes/productRoutes"
+import categoryRoutes from "./routes/categoryRoutes"
 
 dotenv.config();
 const app = express();
@@ -17,6 +18,7 @@ app.use("/auth", authRoutes);
 app.use("/api", authenticateJWT, (router => {
     router.use("/users", userRoutes);
     router.use("/products", productRoutes);
+    router.use("/categories", categoryRoutes);
     return router;
 })(express.Router()));
 

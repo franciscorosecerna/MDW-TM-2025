@@ -19,11 +19,10 @@ const productSchema = new mongoose.Schema({
         min: 0
     },
     category: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Category",
         required: true,
-        enum: ["electronics", "clothing", "books", "toys", "food", "other"],
-        default: "other",
-  }
+    },
 });
 
 export default mongoose.model("Product", productSchema);
